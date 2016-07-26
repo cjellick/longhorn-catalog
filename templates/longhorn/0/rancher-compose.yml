@@ -11,7 +11,7 @@ driver:
         unhealthy_threshold: 3
         healthy_threshold: 2
     metadata:
-        VOLUME_STACK_IMAGE: cjellick/longhorn:dev-cfe065d
+        VOLUME_STACK_IMAGE: cjellick/longhorn:dev-7a7b4ab
 
 storagepool:
     scale: 1

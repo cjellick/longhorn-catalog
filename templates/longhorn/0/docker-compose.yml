@@ -13,7 +13,7 @@ driver:
     - /dev:/host/dev
     - /etc/docker/plugins:/etc/docker/plugins
     - /var/lib/rancher/longhorn:/var/lib/rancher/longhorn
-  image: cjellick/longhorn:dev-cfe065d
+  image: cjellick/longhorn:dev-7a7b4ab
   command:
     - launch-driver
     - volumedriver
@@ -22,7 +22,9 @@ storagepool:
   labels:
     io.rancher.container.create_agent: 'true'
     io.rancher.container.system: Longhorn
-  image: cjellick/longhorn:dev-cfe065d
+  image: cjellick/longhorn:dev-7a7b4ab
+  privileged: true
+  pid: host
   command:
     - launch-driver
     - storagepool
